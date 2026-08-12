@@ -3,8 +3,8 @@
 **Student:** Aman Singh  
 **BITS ID:** 2025AC05123  
 **Dataset:** Mobile Price Classification  
-**GitHub repository:** `REPLACE_WITH_AMAN_GITHUB_REPOSITORY_URL`  
-**Live Streamlit app:** `REPLACE_WITH_AMAN_STREAMLIT_APP_URL`
+**GitHub repository:** `https://github.com/Aman06101/Mobile-Price-Classification`  
+**Live Streamlit app:** `https://mobile-price-classification-2026.streamlit.app/` 
 
 ## A. Problem Statement
 
@@ -48,7 +48,7 @@ For this multiclass problem, Precision, Recall, and F1 use weighted averaging. A
 
 ## C. GitHub Repository Link
 
-`REPLACE_WITH_AMAN_GITHUB_REPOSITORY_URL`
+`https://github.com/Aman06101/Mobile-Price-Classification`
 
 ## D. Models Used and Results
 
@@ -81,32 +81,6 @@ The UI is intentionally simple. It contains three views:
 
 The app never trains on uploaded files. It only loads saved pipelines and uses uploads for evaluation or prediction.
 
-## Repository Structure
-
-```text
-aman_mobile_price_assignment/
-├── streamlit_app.py
-├── README.md
-├── requirements.txt
-├── test_data.csv
-├── data/
-│   ├── mobile_price_train.csv
-│   └── mobile_price_unlabelled.csv
-├── model/
-│   ├── mobile_training.py
-│   ├── model_card.json
-│   ├── comparison.csv
-│   └── saved_models/
-│       ├── logistic_regression.joblib
-│       ├── decision_tree.joblib
-│       ├── knn.joblib
-│       ├── naive_bayes.joblib
-│       └── random_forest.joblib
-├── notebook/
-│   └── mobile_price_models.ipynb
-└── .streamlit/
-    └── config.toml
-```
 
 ## Run Locally on macOS
 
@@ -155,43 +129,3 @@ Open the local address shown in Terminal, normally `http://localhost:8501`.
 6. Open **Predict unlabelled CSV** and use the bundled Kaggle test file.
 7. Confirm the output contains `id`, predicted class, readable class label, and four probability columns.
 
-## Deploy to Streamlit Community Cloud
-
-1. Create a new GitHub repository in Aman's GitHub account.
-2. Commit this project from the repository root.
-3. Push the `main` branch to GitHub.
-4. Open Streamlit Community Cloud and create a new app.
-5. Select the repository and branch `main`.
-6. Use `streamlit_app.py` as the entrypoint.
-7. Select Python 3.13 in advanced settings.
-8. Deploy and inspect the build log.
-9. Test the public app using the bundled and uploaded CSV options.
-10. Replace both placeholder URLs at the top of this README and push the final change.
-
-## Suggested Git Commands
-
-```bash
-git init -b main
-git add .
-git commit -m "Create mobile price classification workflow"
-git remote add origin REPLACE_WITH_AMAN_GITHUB_REPOSITORY_URL
-git push -u origin main
-```
-
-Create later commits only after genuine changes, for example model implementation, UI creation, README completion, and deployment fixes.
-
-## BITS Virtual Lab and Submission PDF
-
-Run the same repository in the BITS Virtual Lab, execute the training script or notebook, and capture one readable screenshot as proof. The final PDF should contain, in the required order:
-
-1. GitHub repository link
-2. Live Streamlit application link
-3. One BITS Virtual Lab execution screenshot
-4. The complete final README content
-
-## Limitations
-
-- The class names are descriptive labels assigned for UI readability; the original target is numeric 0–3.
-- The separate Kaggle test file has no ground-truth target, so it supports prediction only.
-- Results are specific to the fixed split and selected hyperparameters.
-- This project is an educational classification demonstration, not a commercial pricing engine.
