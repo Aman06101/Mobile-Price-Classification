@@ -1,0 +1,84 @@
+{
+  "student": {
+    "name": "Aman Singh",
+    "bits_id": "2025AC05123"
+  },
+  "project": "Mobile Price Classification",
+  "dataset_url": "https://www.kaggle.com/datasets/iabhishekofficial/mobile-price-classification",
+  "dataset": {
+    "labelled_rows": 2000,
+    "unlabelled_rows": 1000,
+    "feature_count": 20,
+    "target": "price_range",
+    "features": [
+      "battery_power",
+      "blue",
+      "clock_speed",
+      "dual_sim",
+      "fc",
+      "four_g",
+      "int_memory",
+      "m_dep",
+      "mobile_wt",
+      "n_cores",
+      "pc",
+      "px_height",
+      "px_width",
+      "ram",
+      "sc_h",
+      "sc_w",
+      "talk_time",
+      "three_g",
+      "touch_screen",
+      "wifi"
+    ],
+    "class_labels": {
+      "0": "Budget",
+      "1": "Lower Mid-Range",
+      "2": "Upper Mid-Range",
+      "3": "Premium"
+    }
+  },
+  "split": {
+    "train_rows": 1600,
+    "test_rows": 400,
+    "test_size": 0.2,
+    "random_state": 123,
+    "stratified": true
+  },
+  "metrics": {
+    "multiclass_average": "weighted",
+    "auc_strategy": "one-vs-rest weighted",
+    "columns": [
+      "Accuracy",
+      "AUC",
+      "Precision",
+      "Recall",
+      "F1",
+      "MCC"
+    ]
+  },
+  "models": {
+    "order": [
+      "Logistic Regression",
+      "Decision Tree",
+      "kNN",
+      "Naive Bayes",
+      "Random Forest"
+    ],
+    "files": {
+      "Logistic Regression": "logistic_regression.joblib",
+      "Decision Tree": "decision_tree.joblib",
+      "kNN": "knn.joblib",
+      "Naive Bayes": "naive_bayes.joblib",
+      "Random Forest": "random_forest.joblib"
+    }
+  },
+  "software": {
+    "python": "3.13.14",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "scikit_learn": "1.8.0",
+    "joblib": "1.5.3"
+  }
+}
